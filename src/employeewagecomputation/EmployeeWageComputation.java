@@ -25,5 +25,28 @@ public class EmployeeWageComputation {
             dailyWage = 0;
         }
         System.out.println("Daily Employee Wage: " + dailyWage);
+
+
+        // ===== UC3: Add Part-Time Employee & Wage =====
+        int partTimeHours=4;
+
+        int empType=(int)(Math.random()*3); // 0, 1, or 2
+        int empHours=0;
+
+        if(empType==2){
+            System.out.println("Employee is Full-Time");
+            empHours=fullDayHours;
+        }
+        else if(empType==1){
+            System.out.println("Employee is Part-Time");
+            empHours=partTimeHours;
+        }
+        else{
+            System.out.println("Employee is Absent");
+            empHours=0;
+        }
+        int dailyWageUC3=wagePerHour*empHours;
+        System.out.println("Daily Employee Wage (UC3): " + dailyWageUC3);
+
     }
 }
