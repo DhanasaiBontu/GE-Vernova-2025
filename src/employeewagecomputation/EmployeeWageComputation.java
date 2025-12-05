@@ -67,5 +67,40 @@ public class EmployeeWageComputation {
         int workingDaysPerMonth=20;
         int monthlyWage=workingDaysPerMonth*dailyWageUC4;
         System.out.println("Monthly Wage (UC5): " + monthlyWage);
+
+        // UC6 : Calculate total wage till total hours = 100 or total working days = 20
+        int totalHours=0;
+        int totalDays=0;
+        int totalSalary=0;
+        while(totalHours<100 && totalDays<20) {
+            totalDays++;
+            int check=(int)(Math.random() * 3); // 0-Absent,1-Part time,2-Full time
+            int hours=0;
+            switch(check) {
+                case 2:
+                    System.out.println("Full Time Employee");
+                    hours=8;
+                    break;
+                case 1:
+                    System.out.println("Part Time Employee");
+                    hours=4;
+                    break;
+                default:
+                    System.out.println("Employee Absent");
+                    hours=0;
+                    break;
+            }
+            totalHours=totalHours+hours;
+            int oneDaySalary=hours*wagePerHour;
+            totalSalary=totalSalary+oneDaySalary;
+            System.out.println("Day : " + totalDays +
+                    "   Hours Worked : " + hours +
+                    "   Today's Salary : " + oneDaySalary +
+                    "   Total Hours : " + totalHours);
+        }
+        System.out.println("UC6 Final Results");
+        System.out.println("Total Working Days : " + totalDays);
+        System.out.println("Total Working Hours : " + totalHours);
+        System.out.println("Total Salary Earned : " + totalSalary);
     }
 }
