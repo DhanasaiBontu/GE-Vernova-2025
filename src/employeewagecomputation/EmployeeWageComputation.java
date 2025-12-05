@@ -13,8 +13,6 @@ public class EmployeeWageComputation {
             System.out.println("Employee is Absent");
         }
 
-
-
         // UC2 - Daily Wage Calculation
         int wagePerHour=20;
         int fullDayHours=8;
@@ -26,8 +24,6 @@ public class EmployeeWageComputation {
             dailyWage = 0;
         }
         System.out.println("Daily Employee Wage: " + dailyWage);
-
-
 
         // ===== UC3: Add Part-Time Employee & Wage =====
         int partTimeHours=4;
@@ -48,8 +44,6 @@ public class EmployeeWageComputation {
         int dailyWageUC3=wagePerHour*empHours;
         System.out.println("Daily Employee Wage (UC3): " + dailyWageUC3);
 
-
-
         // ===== UC4: Employee Wage Using Switch Case =====
         int empTypeUC4=(int)(Math.random()*3); // 0,1,2
         int empHoursUC4;
@@ -69,8 +63,9 @@ public class EmployeeWageComputation {
         int dailyWageUC4=wagePerHour*empHoursUC4;
         System.out.println("Daily Employee Wage (UC4): " + dailyWageUC4);
 
-
-
-
+        // ===== UC5: Calculate Monthly Wage for 20 Days =====
+        int workingDaysPerMonth=20;
+        int monthlyWage=workingDaysPerMonth*dailyWageUC4;
+        System.out.println("Monthly Wage (UC5): " + monthlyWage);
     }
 }
