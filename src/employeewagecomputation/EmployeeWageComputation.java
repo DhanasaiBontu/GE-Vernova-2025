@@ -13,11 +13,12 @@ public class EmployeeWageComputation {
             System.out.println("Employee is Absent");
         }
 
+
+
         // UC2 - Daily Wage Calculation
         int wagePerHour=20;
         int fullDayHours=8;
         int dailyWage = 0;
-
         if(random==1) {
             dailyWage=wagePerHour*fullDayHours;
         }
@@ -27,12 +28,11 @@ public class EmployeeWageComputation {
         System.out.println("Daily Employee Wage: " + dailyWage);
 
 
+
         // ===== UC3: Add Part-Time Employee & Wage =====
         int partTimeHours=4;
-
         int empType=(int)(Math.random()*3); // 0, 1, or 2
         int empHours=0;
-
         if(empType==2){
             System.out.println("Employee is Full-Time");
             empHours=fullDayHours;
@@ -47,6 +47,30 @@ public class EmployeeWageComputation {
         }
         int dailyWageUC3=wagePerHour*empHours;
         System.out.println("Daily Employee Wage (UC3): " + dailyWageUC3);
+
+
+
+        // ===== UC4: Employee Wage Using Switch Case =====
+        int empTypeUC4=(int)(Math.random()*3); // 0,1,2
+        int empHoursUC4;
+        switch(empTypeUC4){
+            case 2:
+                System.out.println("Employee is Full-Time (Switch Case)");
+                empHoursUC4=fullDayHours;
+                break;
+            case 1:
+                System.out.println("Employee is Part-Time (Switch Case)");
+                empHoursUC4=4;
+                break;
+            default:
+                System.out.println("Employee is Absent (Switch Case)");
+                empHoursUC4=0;
+        }
+        int dailyWageUC4=wagePerHour*empHoursUC4;
+        System.out.println("Daily Employee Wage (UC4): " + dailyWageUC4);
+
+
+
 
     }
 }
