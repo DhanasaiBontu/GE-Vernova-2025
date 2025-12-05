@@ -4,9 +4,9 @@ import java.util.Scanner;
 public class LineComparison {
     public static void main(String[] args) {
         System.out.println("Welcome to Line Comparison Computation Program");
+        System.out.println("UC1: Calculating Line Length");
 
         Scanner sc=new Scanner(System.in);
-
         // Taking input for line ends
         System.out.print("Enter x1: ");
         int x1=sc.nextInt();
