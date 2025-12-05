@@ -1,5 +1,5 @@
 import java.util.*;
-public class Main{
+public class CoinFlip {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in); //scanner class is used to take input from user
         //System.out.println("Hello World");
